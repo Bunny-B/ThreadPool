@@ -22,6 +22,7 @@ extern "C" {
         int thread_count;
     } ThreadPool, * PThreadPool;
 
+    extern char is_thread_pool_running;
     extern PThreadPool thread_pool_init(int thread_count);
     extern void thread_pool_add_task(PThreadPool pool, void (*function)(void*), void* arg);
     extern void thread_pool_stop(PThreadPool pool);
